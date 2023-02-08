@@ -1,5 +1,6 @@
 package br.com.attornatus.pessoaendereco.endereco.application.api;
 
+import java.util.List;
 import java.util.UUID;
 
 import org.springframework.web.bind.annotation.RestController;
@@ -20,5 +21,13 @@ public class EnderecoController implements EnderecoAPI {
 		EnderecoResponse endereco = enderecoService.criaEndereco(idPessoa, enderecoRequest);
 		log.info("[finaliza] EnderecoController - postEndereco");
 		return endereco;
+	}
+
+	@Override
+	public List<EnderecosListResponse> getEnderecosDaPessoa(UUID idPessoa) {
+		log.info("[inicia] EnderecoController - postEndereco");
+		log.info("[idPessoa] {}", idPessoa);
+		log.info("[finaliza] EnderecoController - postEndereco");
+		return null;
 	}
 }
