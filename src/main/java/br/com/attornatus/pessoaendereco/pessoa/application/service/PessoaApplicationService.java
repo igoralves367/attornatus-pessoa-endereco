@@ -30,7 +30,8 @@ public class PessoaApplicationService implements PessoaService {
 	@Override
 	public List<PessoaListResponse> listaPessoas() {
 		log.info("[inicia] PessoaApplicationService - listaPessoas");
+		List<Pessoa> pessoas = pessoaRepository.listaPessoas();
 		log.info("[finaliza] PessoaApplicationService - listaPessoas");
-		return null;
+		return PessoaListResponse.converte(pessoas);
 	}
 }
