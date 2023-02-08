@@ -12,6 +12,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
+import br.com.attornatus.pessoaendereco.pessoa.application.api.PessoaEditaRequest;
 import br.com.attornatus.pessoaendereco.pessoa.application.api.PessoaRequest;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -38,5 +39,11 @@ public class Pessoa {
 		this.nomeCompleto = pessoaRequest.getNomeCompleto();
 		this.dataNascimento = pessoaRequest.getDataNascimento();
 		this.dataHoraDoCadastro = LocalDateTime.now();
+	}
+
+	public void altera(PessoaEditaRequest pessoaEditaRequest) {
+		this.nomeCompleto = pessoaEditaRequest.getNomeCompleto();
+		this.dataNascimento = pessoaEditaRequest.getDataNascimento();
+		this.dataHoraDaUltimaAlteracao = LocalDateTime.now();
 	}
 }
