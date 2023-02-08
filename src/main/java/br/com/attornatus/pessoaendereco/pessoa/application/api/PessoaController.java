@@ -43,6 +43,7 @@ public class PessoaController implements PessoaAPI {
 	public void patchEditaPessoa(UUID idPessoa, PessoaEditaRequest PessoaEditaRequest) {
 		log.info("[inicia] PessoaController - patchEditaPessoa");
 		log.info("[idPessoa] {}", idPessoa);
+		pessoaService.patchEditaPessoa(idPessoa, PessoaEditaRequest);
 		log.info("[finaliza] PessoaController - patchEditaPessoa");	
 	}
 }
