@@ -10,6 +10,7 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @RequiredArgsConstructor 
 public class EnderecoInfraRepository implements EnderecoRepository {
+
 	private final EnderecoSpringDataJPARepository enderecoSpringDataJPARepository;
 
 	@Override
