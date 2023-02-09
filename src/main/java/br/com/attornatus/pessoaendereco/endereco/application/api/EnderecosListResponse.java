@@ -2,6 +2,7 @@ package br.com.attornatus.pessoaendereco.endereco.application.api;
 
 import java.util.List;
 import java.util.UUID;
+import java.util.stream.Collectors;
 
 import br.com.attornatus.pessoaendereco.endereco.domain.Endereco;
 import lombok.Value;
@@ -14,7 +15,16 @@ public class EnderecosListResponse {
 	private String cidade;
 	
 	public static List<EnderecosListResponse> converte(List<Endereco> enderecos) {
-		// TODO Auto-generated method stub
-		return null;
+		return enderecos.stream()
+				.map(EnderecosListResponse::new)
+				.collect(Collectors.toList());
 	}
+
+	public EnderecosListResponse(Endereco endereco) {
+		this.idEndereco = endereco.getIdEndereco();
+		this.lagradouro = endereco.getLagradouro();
+		this.cep = endereco.getCep();
+		this.numero = endereco.getNumero();
+		this.cidade = endereco.getCidade();
+	}	
 }
