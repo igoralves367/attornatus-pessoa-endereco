@@ -35,9 +35,9 @@ public class Endereco {
 	private String numero;
 	@NotBlank
 	private String cidade;
+	private TipoEndereco tipoEndereco = TipoEndereco.PRINCIPAL;
 	
 	private LocalDateTime dataHoraDoCadastro;
-	private LocalDateTime dataHoraDaUltimaAlteracao;
 	
 	public Endereco(UUID idPessoa, EnderecoRequest enderecoRequest) {
 		this.idPessoaCadastro = idPessoa;
@@ -45,6 +45,7 @@ public class Endereco {
 		this.cep = enderecoRequest.getCep();
 		this.numero = enderecoRequest.getNumero();
 		this.cidade = enderecoRequest.getCidade();
+		this.tipoEndereco = enderecoRequest.getTipoEndereco();
 		this.dataHoraDoCadastro = LocalDateTime.now();
 	}	
 }

@@ -2,6 +2,7 @@ package br.com.attornatus.pessoaendereco.endereco.application.api;
 
 import javax.validation.constraints.NotBlank;
 
+import br.com.attornatus.pessoaendereco.endereco.domain.TipoEndereco;
 import lombok.Value;
 @Value
 public class EnderecoRequest {
@@ -13,4 +14,5 @@ public class EnderecoRequest {
 	private String numero;
 	@NotBlank
 	private String cidade;
+	private TipoEndereco tipoEndereco;
 }

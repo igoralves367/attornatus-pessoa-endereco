@@ -5,6 +5,7 @@ import java.util.UUID;
 import java.util.stream.Collectors;
 
 import br.com.attornatus.pessoaendereco.endereco.domain.Endereco;
+import br.com.attornatus.pessoaendereco.endereco.domain.TipoEndereco;
 import lombok.Value;
 @Value
 public class EnderecosListResponse {
@@ -13,6 +14,7 @@ public class EnderecosListResponse {
 	private String cep;
 	private String numero;
 	private String cidade;
+	private TipoEndereco tipoEndereco;
 	
 	public static List<EnderecosListResponse> converte(List<Endereco> enderecos) {
 		return enderecos.stream()
@@ -26,5 +28,6 @@ public class EnderecosListResponse {
 		this.cep = endereco.getCep();
 		this.numero = endereco.getNumero();
 		this.cidade = endereco.getCidade();
+		this.tipoEndereco = endereco.getTipoEndereco();
 	}	
 }
