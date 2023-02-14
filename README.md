@@ -25,7 +25,7 @@ O projeto Attornatus Pessoa Endereco foi criado para resolver o desáfio técnic
 ###### attornatus-pessoa-endereco/Attornatus LOCAL.postman_collection.json
 ou⬇️
 * > Pode acessar também o Swagger para fazer os testes da API, rodando o projeto no terminal através do link ⬇️:
-####### http://localhost:8080/pessoa-endereco/api/public/swagger-ui/index.html#/
+ http://localhost:8080/pessoa-endereco/api/public/swagger-ui/index.html#/
 
 ## 📋 Pré-requisitos
 
