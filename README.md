@@ -21,11 +21,11 @@ O projeto Attornatus Pessoa Endereco foi criado para resolver o desáfio técnic
 * Poder informar qual endereço é o principal da pessoa
 
 ## 🖇️ Instruções
-* > Para executar o projeto no terminal, abre sua IDE de preferencia e executa classe: PessoaEnderecoApplication 
-* > Após executar o comando acima, basta apenas acessar o applicativo do Postman e importar as Colletions estão acessíveis na pasta⬇️:
+* > Para executar o projeto na sua maquina, abre sua IDE de preferencia e execute a classe: PessoaEnderecoApplication 
+* > Após executar a instrução acima, basta apenas acessar o applicativo do Postman e importar as Colletions estão acessíveis na pasta⬇️:
 ###### attornatus-pessoa-endereco/Attornatus LOCAL.postman_collection.json
 ou⬇️
-* > Pode acessar também o Swagger para fazer os testes da API, rodando o projeto no terminal através do link ⬇️:
+* > Pode acessar também o Swagger para fazer os testes da API, rodando o projeto na maquina e acessar através do link ⬇️:
  http://localhost:8080/pessoa-endereco/api/public/swagger-ui/index.html#/
 
 ## 📋 Pré-requisitos
