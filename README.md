@@ -5,6 +5,7 @@ O projeto Attornatus Pessoa Endereco foi criado para resolver o desáfio técnic
 * Java 11 
 * Spring Boot
 * JPA / Hibernate
+* Banco H2
 * Maven
 * GitHub
 * Lombok
