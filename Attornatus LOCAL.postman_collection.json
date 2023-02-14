@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "c44b8c36-bbda-49d4-b423-cef5982b74f4",
+		"name": "Attornatus LOCAL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23094206"
+	},
+	"item": [
+		{
+			"name": "Pessoa",
+			"item": [
+				{
+					"name": "Listar todas as Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Criar Pessoa",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeCompleto\": \"Igor Alves\",\n  \"dataNascimento\": \"1997-03-06\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/pessoa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"pessoa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar uma Pessoa pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/pessoa/80c97a42-2299-44a4-b712-dc72244d7e44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"pessoa",
+								"80c97a42-2299-44a4-b712-dc72244d7e44"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar uma Pessoa pelo Id",
+					"request": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"nomeCompleto\": \"Igor Alves de Jesus\",\n  \"dataNascimento\": \"1997-03-06\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/pessoa/80c97a42-2299-44a4-b712-dc72244d7e44",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"pessoa",
+								"80c97a42-2299-44a4-b712-dc72244d7e44"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereço",
+			"item": [
+				{
+					"name": "Cadastrar Endereco da Pessoa pelo Id",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"lagradouro\": \"Av Gorvenador Valadares\",\n  \"cep\": \"45828280\",\n  \"numero\": \"308B\",\n  \"cidade\": \"Eunapolis\",\n  \"tipoEndereco\": \"PRINCIPAL\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/endereco/5899e035-edd9-4b35-9b08-e3cfb32ed0c6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"endereco",
+								"5899e035-edd9-4b35-9b08-e3cfb32ed0c6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Endereco da Pessoa pelo Id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/pessoa-endereco/api/v1/endereco/1f10d3f2-7860-4fde-bfa8-bc3ca857b87e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoa-endereco",
+								"api",
+								"v1",
+								"endereco",
+								"1f10d3f2-7860-4fde-bfa8-bc3ca857b87e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
